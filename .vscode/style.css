@@ -45,6 +45,9 @@ body {
 #profile img {
   width: 112px;
   height: 112px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--stroke-color);
 }
 
 body * {
