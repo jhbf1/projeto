@@ -74,6 +74,14 @@
           const html = document.documentElement
           html.classList.toggle("light")
           html.classList.toggle("dark")
+
+          // Swap profile image
+          const profileImg = document.querySelector("#profile img")
+          if (html.classList.contains("light")) {
+            profileImg.src = "./assets/avatar-light.png"
+          } else {
+            profileImg.src = "./assets/avatar.png"
+          }
         })
     </script>
   </body>
