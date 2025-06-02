@@ -88,11 +88,14 @@ body * {
   background-repeat: no-repeat;
   background-position: center;
   background-size: 60%; /* adjust as needed */
+  animation: slideout 0.5s forwards;
 }
 .light #switch button {
-  right: 0;
-  left: initial;
+  animation: slidein 0.5s forwards;
   /* Remove background property here */
+}
+#switch button:hover {
+  outline: 8px solid var(--highlight-color);
 }
 #switch span {
   display: block;
@@ -172,5 +175,22 @@ ul {
   }
   .light {
     --bg-url: url(./assets/bg-desktop-light.jpg);
+  }
+}
+/*animations*/
+@keyframes slidein {
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
+}
+@keyframes slideout {
+  from {
+    left: 50%;
+  }
+  to {
+    left: 0;
   }
 }
